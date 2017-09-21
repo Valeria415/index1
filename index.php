@@ -42,15 +42,20 @@ $user = "username";
 $pwd = "password";
 $db = "registration";
 // Connect to database.
+// PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO
-( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
-    $conn->setAttribute
-( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "Valera", "{your_password_here}");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
-catch(Exception $e){
-    die(var_dump($e));
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
 }
+
+// SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "Valera@pinyasova", "pwd" => "{hswfhmlyz08}", "Database" => "Прогр", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:pinyasova.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
 </body>
 </html>
