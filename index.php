@@ -36,12 +36,6 @@ name="email" id="email"/></br>
 name="submit" value="Submit" />
 </form>
 <?php
-// DB connection info
-$host = "localhost\sqlexpress";
-$user = "username";
-$pwd = "password";
-$db = "registration";
-// Connect to database.
 // PHP Data Objects(PDO) Sample Code:
 try {
     $conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "Valera", "{your_password_here}");
