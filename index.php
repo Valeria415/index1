@@ -37,7 +37,7 @@ name="submit" value="Submit" />
     
     <?php
 try {
-$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "vol1", "Simpsons1");
+$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "Valera", "Hswfhmlyz08");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
 }
@@ -85,7 +85,7 @@ echo "<h3>No one is currently registered.</h3>";
 }
  
 try {
-$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "vol1", "Simpsons1");
+$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "Valera", "{your_password_here}");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
 if(isset($_POST["submit2"]))
