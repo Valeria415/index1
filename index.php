@@ -85,7 +85,7 @@ echo "<h3>No one is currently registered.</h3>";
 }
  
 try {
-$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "Valera", "{your_password_here}");
+$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "Valera", "Hswfhmlyz08");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
 if(isset($_POST["submit2"]))
@@ -101,8 +101,6 @@ die(print_r($e));
 ?>
    
 </form>
-<?php
 
-?>
 </body>
 </html>
