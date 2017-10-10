@@ -83,21 +83,7 @@ echo "</table>";
 } else {
 echo "<h3>No one is currently registered.</h3>";
 }
- 
-try {
-$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Прогр", "Valera", "Hswfhmlyz08");
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
- 
-if(isset($_POST["submit2"]))
-{
-$sql1 = "DELETE FROM registration_tbl";
-$conn->query($sql1);
-}
-}
-catch (PDOException $e) {
-print("Error connecting to SQL Server.");
-die(print_r($e));
-}
+
 ?>
    
 </form>
