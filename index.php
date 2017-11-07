@@ -23,7 +23,7 @@ border: 0 none; }
 </head>
 <body>
 <h1>Register here!</h1>
-<p>Fill in your name and 
+<p>Fill in your name, password and 
 email address, then click <strong>Submit</strong> 
 to register.</p>
 <form method="post" action="index.php" 
@@ -32,6 +32,8 @@ enctype="multipart/form-data" >
 name="name" id="name"/></br>
       Password  <input type="text" 
 name="password" id="password"/></br>
+      Confirm password  <input type="text" 
+name="confirm password" id="confirm password"/></br>
       Email <input type="text" 
 name="email" id="email"/></br>
       <input type="submit" 
