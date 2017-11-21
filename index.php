@@ -92,9 +92,9 @@ try {
    $confirmpassword = $_POST['confirm password'];
     if($password == $confirmpassword)
     {
-        print "молодец";
+       echo "<h3>1</h3>";
     }
-    else {print "нет";}
+    else {echo "<h3>0</h3>";}
   
 ?>
    
