@@ -87,7 +87,15 @@ echo "</table>";
 } else {
 echo "<h3>No one is currently registered.</h3>";
 }
-
+try {
+   $password = $_POST['password'];
+   $confirmpassword = $_POST['confirm password'];
+    if($password == $confirmpassword)
+    {
+        print "молодец";
+    }
+    else {print "нет";}
+  
 ?>
    
 </form>
