@@ -44,6 +44,14 @@ try {
 $conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
+    $password = $_POST['password'];
+   $confirmpassword = $_POST['confirm password'];
+    if($password == $confirmpassword)
+    {
+       echo "<h3>1</h3>";
+    }
+    else {echo "<h3>0</h3>";}
+  
 }
 catch (PDOException $e) {
 print("Error connecting to SQL Server.");
@@ -86,16 +94,7 @@ echo "<td>".$registrant['date']."</td></tr>";
 echo "</table>";
 } else {
 echo "<h3>No one is currently registered.</h3>";
-}
-try {
-   $password = $_POST['password'];
-   $confirmpassword = $_POST['confirm password'];
-    if($password == $confirmpassword)
-    {
-       echo "<h3>1</h3>";
-    }
-    else {echo "<h3>0</h3>";}
-  
+}  
 ?>
    
 </form>
