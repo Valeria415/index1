@@ -33,11 +33,11 @@ name="name" id="name"/></br>
       Password  <input type="text" 
 name="password" id="password"/></br>
       Confirm password  <input type="text" 
-name="confirm password" id="confirm password"/></br>
+name="confirm_password" id="confirm_password"/></br>
       Email <input type="text" 
 name="email" id="email"/></br>
       <input type="submit" 
-name="submit" value="Submit" />
+name="submit" value="submit" />
     
     <?php
 try {
@@ -87,7 +87,7 @@ echo "</table>";
 echo "<h3>No one is currently registered.</h3>";
 }  
 $password = $_POST['password'];
-   $confirmpassword = $_POST['confirm password'];
+   $confirmpassword = $_POST['confirm_password'];
     if($password == $confirmpassword)
     {
        echo "<h3>1</h3>";
