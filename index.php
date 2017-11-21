@@ -86,13 +86,20 @@ echo "</table>";
 } else {
 echo "<h3>No one is currently registered.</h3>";
 }  
+
+if(!empty($_POST)) {
+    try {
 $password = $_POST['password'];
-   $confirmpassword = $_POST['confirm_password'];
+$confirmpassword = $_POST['confirm_password'];
     if($password == $confirmpassword)
     {
-       echo "<h3>1</h3>";
+        echo "<h3>1</h3>";
     }
     else {echo "<h3>0</h3>";}
+    }
+    catch(Exception $e) {
+die(var_dump($e));
+}
 ?>
    
 </form>
