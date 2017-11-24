@@ -87,12 +87,14 @@ echo "</table>";
 echo "<h3>No one is currently registered.</h3>";
 }  
 
+$password = $_POST['password'];
+$confirmpassword = $_POST['confirm_password'];
     if($password == $confirmpassword)
     {
         echo "<h3>1</h3>";
     }
     else {echo "<h3>0</h3>";}
-}
+
 ?>
    
 </form>
