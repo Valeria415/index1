@@ -32,6 +32,8 @@ enctype="multipart/form-data" >
 name="name" id="name"/></br>
       Password  <input type="text" 
 name="password" id="password"/></br>
+    <input type="submit" 
+name="проверка" value="submit1" /></br>
       Confirm password  <input type="text" 
 name="confirm_password" id="confirm_password"/></br>
       Email <input type="text" 
