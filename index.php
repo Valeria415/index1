@@ -73,6 +73,7 @@ $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $password);
 $stmt->execute();
 }
+    
 catch(Exception $e) {
 die(var_dump($e));
 }
@@ -91,7 +92,7 @@ echo "<th>Password</th></tr>";
 foreach($registrants as $registrant) {
 echo "<tr><td>".$registrant['name']."</td>";
 echo "<td>".$registrant['email']."</td>";
-echo "<td>".$registrant['date']."</td>;
+echo "<td>".$registrant['date']."</td>";
 echo "<td>".$registrant['password']."</td></tr>";
 }
 echo "</table>";
