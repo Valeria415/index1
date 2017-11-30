@@ -42,6 +42,8 @@ name="email" id="email"/></br>
       <input type="submit" 
 name="submit" value="submit" />
     
+
+
     <?php
 try {
 $conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
@@ -56,6 +58,10 @@ try {
 $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
+$password = $_POST['password'];
+    
+    
+    
 // Insert data
 $sql_insert =
 "INSERT INTO registration_tbl1 (name, email, date)
@@ -64,6 +70,7 @@ $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
+$stmt->bindValue(4, $password);
 $stmt->execute();
 }
 catch(Exception $e) {
@@ -83,13 +90,23 @@ echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
 echo "<tr><td>".$registrant['name']."</td>";
 echo "<td>".$registrant['email']."</td>";
-echo "<td>".$registrant['date']."</td></tr>";
+echo "<td>".$registrant['date']."</td>;
+echo "<td>".$registrant['password']."</td></tr>";
 }
 echo "</table>";
 } else {
 echo "<h3>No one is currently registered.</h3>";
 }  
 
+
+
+
+$sql_select = "SELECT * FROM registration_tbl1";
+    where $name==$name;
+
+    
+    
+    
 $password = $_POST['password'];
 $confirmpassword = $_POST['confirm_password'];
     if($password == $confirmpassword)
