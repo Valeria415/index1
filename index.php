@@ -92,6 +92,19 @@ echo "</table>";
 echo "<h3>No one is currently registered.</h3>";
 }  
 
+$sql_select = "SELECT * FROM registration_tbl1";
+    where $name==$name;
+
+    
+    
+    
+$password = $_POST['password'];
+$confirmpassword = $_POST['confirm_password'];
+    if($password == $confirmpassword)
+    {
+        echo "<h3>пароль введен верно</h3>";
+    }
+    else {echo "<h3>пароль введен неверно</h3>";}
 
 ?>
    
