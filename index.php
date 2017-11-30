@@ -26,21 +26,14 @@ border: 0 none; }
 <p>Fill in your name, password and 
 email address, then click <strong>Submit</strong> 
 to register.</p>
-<form method="post" action="index.php" 
-enctype="multipart/form-data" >
-      Name  <input type="text" 
-name="name" id="name"/></br>
-    <input type="submit" 
-name="submit1" value="chek" /></br>
-      Password  <input type="text" 
-name="password" id="password"/></br>
+<form method="post" action="index.php" enctype="multipart/form-data" >
+      Name  <input type="text" name="name" id="name"/></br>
+    <input type="submit" name="submit1" value="chek" /></br>
+      Password  <input type="text" name="password" id="password"/></br>
     
-      Confirm password  <input type="text" 
-name="confirm_password" id="confirm_password"/></br>
-      Email <input type="text" 
-name="email" id="email"/></br>
-      <input type="submit" 
-name="submit" value="submit" />
+     Confirm password  <input type="text" name="confirm_password" id="confirm_password"/></br>
+      Email <input type="text" name="email" id="email"/></br>
+      <input type="submit" name="submit" value="submit" />
     
 
 
@@ -64,8 +57,7 @@ $password = $_POST['password'];
     
 // Insert data
 $sql_insert =
-"INSERT INTO registration_tbl1 (name, email, date)
-VALUES (?,?,?)";
+"INSERT INTO registration_tbl1 (name, email, date, password) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email);
