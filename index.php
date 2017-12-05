@@ -22,18 +22,22 @@ border: 0 none; }
 </style>
 </head>
 <body>
-<h1>Register here!</h1>
-<p>Fill in your name, password and 
-email address, then click <strong>Submit</strong> 
-to register.</p>
-<form method="post" action="index.php" enctype="multipart/form-data" >
-      Name  <input type="text" name="name" id="name"/></br>
-    <input type="submit" name="submit1" value="chek" /></br>
-      Password  <input type="text" name="password" id="password"/></br>
-    
-     Confirm password  <input type="text" name="confirm_password" id="confirm_password"/></br>
-      Email <input type="text" name="email" id="email"/></br>
-      <input type="submit" name="submit" value="submit" />
+<h1>Регистрация</h1>
+<p>Введите своё имя, пароль, электронный адрес  <strong>Регистрация</strong> 
+.</p>
+<form method="post" action="index.php" 
+enctype="multipart/form-data" >
+Name  <input type="text" 
+name="name" id="name"/></br>
+<input type="submit" name="submit1" value="chek" /></br>
+Password  <input type="text" 
+name="password" id="password"/></br>  
+Confirm password  <input type="text" 
+name="confirm_password" id="confirm_password"/></br>
+Email <input type="text" 
+name="email" id="email"/></br>
+<input type="submit" 
+name="submit" value="submit" />
     
 
 
@@ -91,11 +95,7 @@ echo "</table>";
 } else {
 echo "<h3>No one is currently registered.</h3>";
 }  
-
-$sql_select = "SELECT * FROM registration_tbl1";
-    where $name==$name;
-
-    
+  
     
     
 $password = $_POST['password'];
