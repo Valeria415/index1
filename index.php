@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Registration Form</Title>
+<Title>Регистрационная форма</Title>
 <style type="text/css">
     body { background-color:
  #fff; border-top: solid 10px #000;
@@ -23,19 +23,19 @@ border: 0 none; }
 </head>
 <body>
 <h1>Регистрация</h1>
-<p>Заполните своё имя, пароль, электронный адрес, а затем нажмите <strong> Регистрация </strong> 
+<p>Заполните своё имя, пароль, электронный адрес, а затем нажмите <strong> "Зарегестрироваться" </strong> 
 .</p>
 <form method="post" action="index.php" 
 enctype="multipart/form-data" >
 Name  <input type="text" 
-name="name" id="name"/></br>
-<input type="submit" name="submit1" value="chek" /></br>
+name="name" id="Имя"/></br>
+<input type="submit" name="submit1" value="Повторить" /></br>
 Password  <input type="text" 
-name="password" id="password"/></br>  
+name="password" id="Пароль"/></br>  
 Confirm password  <input type="text" 
-name="confirm_password" id="confirm_password"/></br>
+name="confirm_password" id="Повторите пароль"/></br>
 Email <input type="text" 
-name="email" id="email"/></br>
+name="email" id="Email"/></br>
 <input type="submit" 
 name="submit" value="submit" />
     
