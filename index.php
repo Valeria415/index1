@@ -36,7 +36,7 @@ name="confirm_password" id="confirm_password"/></br>
 Email <input type="text" 
 name="Email" id="Email"/></br>
 <input type="submit" 
-       name="submit1" value="Проверить наличие в БД" /></br>
+       name="submit1" value="Проверить" /></br>
 <input type="submit" 
        name="submit" value="Регистрация" />
     
