@@ -27,13 +27,13 @@ border: 0 none; }
 .</p>
 <form method="post" action="index.php" 
 enctype="multipart/form-data" >
-Name  <input type="text" 
-name="Имя" id="name"/></br>
+Имя  <input type="text" 
+name="name" id="name"/></br>
 <input type="submit" name="submit1" value="Повторить" /></br>
-Password  <input type="text" 
-name="Пароль" id="password"/></br>  
-Confirm password  <input type="text" 
-name="Повторите пароль" id="confirm_password"/></br>
+Пароль  <input type="text" 
+name="password" id="password"/></br>  
+Повторите пароль  <input type="text" 
+name="confirm_password" id="confirm_password"/></br>
 Email <input type="text" 
 name="Email" id="Email"/></br>
 <input type="submit" 
