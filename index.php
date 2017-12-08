@@ -95,9 +95,6 @@ echo "</table>";
 } else {
 echo "<h3>No one is currently registered.</h3>";
 }  
-  
-   $sql_select = "SELECT * FROM registration_tbl1";
-    where $name==$name;
  
     
 $password = $_POST['password'];
