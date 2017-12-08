@@ -23,21 +23,21 @@ border: 0 none; }
 </head>
 <body>
 <h1>Регистрация</h1>
-<p>Заполните своё имя, пароль, электронный адрес, а затем нажмите <strong> "Зарегестрироваться" </strong> 
+<p>Заполните своё имя, пароль, электронный адрес, а затем нажмите <strong> "Регистрация" </strong> 
 .</p>
 <form method="post" action="index.php" 
 enctype="multipart/form-data" >
 Name  <input type="text" 
-name="name" id="Имя"/></br>
+name="Имя" id="name"/></br>
 <input type="submit" name="submit1" value="Повторить" /></br>
 Password  <input type="text" 
-name="password" id="Пароль"/></br>  
+name="Пароль" id="password"/></br>  
 Confirm password  <input type="text" 
-name="confirm_password" id="Повторите пароль"/></br>
+name="Повторите пароль" id="confirm_password"/></br>
 Email <input type="text" 
-name="email" id="Email"/></br>
+name="Email" id="Email"/></br>
 <input type="submit" 
-name="submit" value="submit" />
+name="submit" value="Регистрация" />
     
 
 
@@ -52,8 +52,8 @@ die(print_r($e));
 }
 if(!empty($_POST)) {
 try {
-$name = $_POST['name'];
-$email = $_POST['email'];
+$Имя = $_POST['Name'];
+$Email = $_POST['Email'];
 $date = date("Y-m-d");
 $password = $_POST['password'];
     
