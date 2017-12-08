@@ -23,18 +23,17 @@ border: 0 none; }
 </head>
 <body>
 <h1>Регистрация</h1>
-<p>Заполните своё имя, пароль, электронный адрес, а затем нажмите <strong> "Регистрация" </strong> 
-.</p>
+<p>Заполните своё имя, пароль, электронный адрес, а затем нажмите <strong> "Регистрация" </strong> .</p>
 <form method="post" action="index.php" 
-enctype="multipart/form-data" >
+      enctype="multipart/form-data" >
 Имя  <input type="text" 
-name="name" id="name"/></br>
+       name="name" id="name"/></br>
 Пароль  <input type="text" 
-name="password" id="password"/></br>  
+       name="password" id="password"/></br>  
 Повторите пароль  <input type="text" 
-name="confirm_password" id="confirm_password"/></br>
+       name="confirm_password" id="confirm_password"/></br>
 Email <input type="text" 
-name="Email" id="Email"/></br>
+       name="Email" id="Email"/></br>
 <input type="submit" 
        name="submit1" value="Проверить" /></br>
 <input type="submit" 
@@ -53,7 +52,7 @@ die(print_r($e));
 }
 if(!empty($_POST)) {
 try {
-$Имя = $_POST['Name'];
+$Name = $_POST['Name'];
 $Email = $_POST['Email'];
 $date = date("Y-m-d");
 $password = $_POST['password'];
@@ -62,7 +61,7 @@ $password = $_POST['password'];
     
 // Insert data
 $sql_insert =
-"INSERT INTO test_tbl1 (name, email, date, password) VALUES (?,?,?,?)";
+"INSERT INTO test_tbl1 (Имя, email, date, password) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email);
