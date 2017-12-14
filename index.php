@@ -80,19 +80,6 @@ echo "<h3>Вы зарегестированы!</h3>";
 
 
 
-$sql_select = "SELECT id FROM test_tbl1 where (name = '$Name')";
-$stmt = $conn->query($sql_select);
-$registrants = $stmt->fetchAll();
-if(count($registrants) > 0) {
-
-foreach($registrants as $registrant) {
-echo "Такой пользователь уже существует";
-}
-echo "</table>";
-} else {
-echo "молодец";
-}  
-
 
     
 $password = $_POST['password'];
