@@ -35,7 +35,7 @@ border: 0 none; }
 Email <input type="text" 
        name="Email" id="Email"/></br>
 <input type="submit" 
-       name="submit1" value="Проверить" /></br>
+       name="submit2" value="Проверить" /></br>
 <input type="submit" 
        name="submit" value="Регистрация" />
     
@@ -56,8 +56,8 @@ $Name = $_POST['Name'];
 $Email = $_POST['Email'];
 $date = date("Y-m-d");
 $password = $_POST['password'];
-    
-    
+$submit2= $_POST['submit2'];
+
     
 // Insert data
 $sql_insert =
@@ -75,6 +75,8 @@ die(var_dump($e));
 }
 echo "<h3>Вы зарегестированы!</h3>";
 }
+
+if ($submit2) {
 $sql_select = "SELECT * FROM test_tbl1";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
@@ -95,7 +97,7 @@ echo "</table>";
 } else {
 echo "<h3>В настоящее время никто не зарегистрирован.</h3>";
 }  
- 
+} 
     
 $password = $_POST['password'];
 $confirmpassword = $_POST['confirm_password'];
