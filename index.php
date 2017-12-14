@@ -77,25 +77,17 @@ echo "<h3>Вы зарегестированы!</h3>";
 }
 
 if ($submit2) {
-$sql_select = "SELECT * FROM test_tbl1";
+$sql_select = "SELECT id FROM test_tbl1 where (name = '$Name')";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
-echo "<h2>Люди, которые зарегестрированы:</h2>";
-echo "<table>";
-echo "<tr><th>Name</th>";
-echo "<th>Email</th>";
-echo "<th>Date</th>";
-echo "<th>Password</th></tr>";
+
 foreach($registrants as $registrant) {
-echo "<tr><td>".$registrant['name']."</td>";
-echo "<td>".$registrant['email']."</td>";
-echo "<td>".$registrant['date']."</td>";
-echo "<td>".$registrant['password']."</td></tr>";
+echo "1";
 }
 echo "</table>";
 } else {
-echo "<h3>В настоящее время никто не зарегистрирован.</h3>";
+echo "0";
 }  
 } 
     
