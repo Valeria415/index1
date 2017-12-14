@@ -56,12 +56,11 @@ $Name = $_POST['Name'];
 $Email = $_POST['Email'];
 $date = date("Y-m-d");
 $password = $_POST['password'];
-    $submit1= $_POST['submit'];
-$submit2= $_POST['submit2'];
+
 
     
 // Insert data
-    if($submit1){
+
 $sql_insert =
 "INSERT INTO test_tbl1 (name, email, date, password) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
@@ -78,9 +77,9 @@ die(var_dump($e));
 }
 echo "<h3>Вы зарегестированы!</h3>";
 }
-}
 
-if($submit2){
+
+
 $sql_select = "SELECT id FROM test_tbl1 where (name = '$Name')";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
@@ -93,7 +92,7 @@ echo "</table>";
 } else {
 echo "молодец";
 }  
-}
+
 
     
 $password = $_POST['password'];
