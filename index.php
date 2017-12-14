@@ -73,7 +73,7 @@ $stmt->execute();
 catch(Exception $e) {
 die(var_dump($e));
 }
-echo "<h3>Вы зарегестированы!</h3>";
+echo "<h3>Вы зарегистрированы!</h3>";
 }
 
 $sql_select = "SELECT * FROM test_tbl1";
