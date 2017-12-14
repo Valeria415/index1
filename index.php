@@ -76,20 +76,21 @@ die(var_dump($e));
 echo "<h3>Вы зарегестированы!</h3>";
 }
 
-if ($submit2) {
+if($submit2 == true){
 $sql_select = "SELECT id FROM test_tbl1 where (name = '$Name')";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
 
 foreach($registrants as $registrant) {
-echo "1";
+echo "Такой пользователь уже существует";
 }
 echo "</table>";
 } else {
-echo "0";
+echo "молодец";
 }  
-} 
+}
+
     
 $password = $_POST['password'];
 $confirmpassword = $_POST['confirm_password'];
