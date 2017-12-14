@@ -80,7 +80,7 @@ $sql_select = "SELECT * FROM test_tbl1";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
 if(count($registrants) > 0) {
-    echo "<h2>People who are registered:</h2>";
+    echo "<h2>Люди, которые зарегистрированы:</h2>";
     echo "<table>";
     echo "<tr><th>Name</th>";
     echo "<th>Email</th>";
@@ -92,7 +92,7 @@ if(count($registrants) > 0) {
     }
     echo "</table>";
 } else {
-    echo "<h3>No one is currently registered.</h3>";
+    echo "<h3>Ни один пользователь не зарегистрирован.</h3>";
 }
 
 
