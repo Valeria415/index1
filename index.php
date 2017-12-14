@@ -56,10 +56,12 @@ $Name = $_POST['Name'];
 $Email = $_POST['Email'];
 $date = date("Y-m-d");
 $password = $_POST['password'];
+    $submit1= $_POST['submit'];
 $submit2= $_POST['submit2'];
 
     
 // Insert data
+    if($submit1 == true){
 $sql_insert =
 "INSERT INTO test_tbl1 (name, email, date, password) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
@@ -69,11 +71,13 @@ $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $password);
 $stmt->execute();
 }
+
     
 catch(Exception $e) {
 die(var_dump($e));
 }
 echo "<h3>Вы зарегестированы!</h3>";
+}
 }
 
 if($submit2 == true){
