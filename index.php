@@ -53,6 +53,8 @@ print("Error connecting to SQL Server.");
 die(print_r($e));
 }
 if(!empty($_POST)) {
+    if($_POST["name"] =="" || $_POST["password"] ==""){echo "Введите логин и пароль";}
+    else{
 try {
 $name = $_POST['name'];
 $email = $_POST['Email'];
@@ -77,6 +79,7 @@ catch(Exception $e) {
 die(var_dump($e));
 }
 echo "<h3>Вы зарегистрированы!</h3>";
+}
 }
 
 $sql_select = "SELECT * FROM test_tbl1";
