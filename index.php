@@ -39,7 +39,7 @@ Email <input type="text"
 <input type="submit" 
        name="submit" value="Регистрация"/></br>
 <input type="submit" 
-       name="submi3" value="Удалить"/>
+       name="submit3" value="Удалить"/>
     
 
     <?php
