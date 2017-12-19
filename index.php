@@ -52,7 +52,7 @@ die(print_r($e));
 }
 if(!empty($_POST)) {
 try {
-$Name = $_POST['Name'];
+$Name = $_POST['name'];
 $Email = $_POST['Email'];
 $date = date("Y-m-d");
 $password = $_POST['password'];
