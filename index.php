@@ -52,7 +52,7 @@ catch (PDOException $e) {
 print("Error connecting to SQL Server.");
 die(print_r($e));
 }
-if(!empty($_POST)) {
+if(isset($_POST["submit"])) {
     if($_POST["name"] =="" || $_POST["password"] ==""){echo "Введите логин и пароль";}
     else{
 try {
