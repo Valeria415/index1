@@ -65,8 +65,6 @@ die(print_r($e));
 try {
 $conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    
 }
 catch (PDOException $e) {
 print("Error connecting to SQL Server.");
@@ -84,8 +82,6 @@ $password = $_POST['password'];
 
     
 // Insert data
-
-    
 $sql_insert =
 "INSERT INTO test_tbl1 (name, email, date, password) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
