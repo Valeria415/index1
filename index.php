@@ -64,7 +64,7 @@ $password = $_POST['password'];
 $sql_insert =
 "INSERT INTO test_tbl1 (name, email, date, password) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
-$stmt->bindValue(1, $Name);
+$stmt->bindValue(1, $name);
 $stmt->bindValue(2, $Email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $password);
