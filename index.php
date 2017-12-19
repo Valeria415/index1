@@ -9,7 +9,7 @@
  font-family: "Segoe UI",
  Verdana, Helvetica, Sans-Serif;
     }
-    h1, h2, h3,{ color: #000; 
+    h1, h2, h3,{ color: #000;
 margin-bottom: 0; padding-bottom: 0; }
     h1 { font-size: 2em; }
     h2 { font-size: 1.75em; }
@@ -17,30 +17,29 @@ margin-bottom: 0; padding-bottom: 0; }
     table { margin-top: 0.75em; }
     th { font-size: 1.2em;
  text-align: left; border: none; padding-left: 0; }
-    td { padding: 0.25em 2em 0.25em 0em; 
+    td { padding: 0.25em 2em 0.25em 0em;
 border: 0 none; }
 </style>
 </head>
 <body>
 <h1>Регистрация</h1>
 <p>Заполните своё имя, пароль, электронный адрес, а затем нажмите <strong> "Регистрация" </strong> .</p>
-<form method="post" action="index.php" 
+<form method="post" action="index.php"
       enctype="multipart/form-data" >
-Имя  <input type="text" 
+Имя  <input type="text"
        name="name" id="name"/></br>
-Пароль  <input type="text" 
+Пароль  <input type="text"
        name="password" id="password"/></br>  
-Повторите пароль  <input type="text" 
+Повторите пароль  <input type="text"
        name="confirm_password" id="confirm_password"/></br>
-Email <input type="text" 
+Email <input type="text"
        name="Email" id="Email"/></br>
-<input type="submit" 
+<input type="submit"
        name="submit2" value="Проверить" /></br>
-<input type="submit" 
-       name="submit" value="Регистрация"/></br>
-<input type="submit" 
-       name="submit3" value="Удалить"/>
+<input type="submit"
+       name="submit" value="Регистрация" />
     
+
 
     <?php
 try {
@@ -101,7 +100,7 @@ echo "<h3>Вы зарегистрированы!</h3>";
 
 $sql_select = "SELECT * FROM test_tbl1";
 $stmt = $conn->query($sql_select);
-$registrants = $stmt->fetchAll(); 
+$registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
     echo "<h2>Люди, которые зарегистрированы:</h2>";
     echo "<table>";
@@ -119,19 +118,6 @@ if(count($registrants) > 0) {
 } else {
     echo "<h3>Ни один пользователь не зарегистрирован.</h3>";
 }
-
-if(isset($_POST["submit3"]))
-{
-    try {
-$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-$sql1 = "DELETE FROM test_tbl1";
-$conn->query($sql1);}
-catch (PDOException $e) {
-print("Error connecting to SQL Server.");
-die(print_r($e));}
-}
-
 
 ?>
    
