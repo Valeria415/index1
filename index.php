@@ -37,9 +37,10 @@ Email <input type="text"
 <input type="submit" 
        name="submit2" value="Проверить" /></br>
 <input type="submit" 
-       name="submit" value="Регистрация" />
+       name="submit" value="Регистрация"/></br>
+<input type="submit" 
+       name="submi3" value="Удалить"/>
     
-
 
     <?php
 try {
@@ -71,7 +72,7 @@ print("Error connecting to SQL Server.");
 die(print_r($e));
 }
 if(isset($_POST["submit"])) {
-    if($_POST["name"] =="" || $_POST["password"] ==""){echo "Введите логин и пароль";}
+    if($_POST["name"] =="" || $_POST["password"|| $_POST["email"] ==""){echo "Введите логин и пароль";}
     else{
 try {
 $name = $_POST['name'];
@@ -118,6 +119,20 @@ if(count($registrants) > 0) {
 } else {
     echo "<h3>Ни один пользователь не зарегистрирован.</h3>";
 }
+
+if(isset($_POST["submit3"]))
+{
+$sql1 = "DELETE FROM registration_tbl";
+$conn->query($sql1);
+}
+}
+catch (PDOException $e) {
+print("Error connecting to SQL Server.");
+die(print_r($e));
+}
+try {
+$conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
 ?>
    
