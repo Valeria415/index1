@@ -60,7 +60,14 @@ $password = $_POST['password'];
 
     
 // Insert data
-
+$password = $_POST['password'];
+$confirmpassword = $_POST['confirm_password'];
+    if($password == $confirmpassword)
+    {
+        echo "<h3>Пароль введен верно</h3>";
+    }
+    else {echo "<h3>Пароль введен неверно</h3>";}
+    
 $sql_insert =
 "INSERT INTO test_tbl1 (name, email, date, password) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
@@ -96,17 +103,6 @@ if(count($registrants) > 0) {
 } else {
     echo "<h3>Ни один пользователь не зарегистрирован.</h3>";
 }
-
-
-
-    
-$password = $_POST['password'];
-$confirmpassword = $_POST['confirm_password'];
-    if($password == $confirmpassword)
-    {
-        echo "<h3>Пароль введен верно</h3>";
-    }
-    else {echo "<h3>Пароль введен неверно</h3>";}
 
 ?>
    
