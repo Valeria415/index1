@@ -47,7 +47,7 @@ try {
 $conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    if(isset($_POST["submit2"])){
+  /*  if(isset($_POST["submit2"])){
     $password = $_POST['password'];
 $confirmpassword = $_POST['confirm_password'];
     if($password == $confirmpassword)
@@ -56,7 +56,7 @@ $confirmpassword = $_POST['confirm_password'];
     }
     else {echo "<h3>Пароль введен неверно</h3>";}}
     
-    
+    */
 }
 catch (PDOException $e) {
 print("Error connecting to SQL Server.");
