@@ -122,7 +122,7 @@ if(count($registrants) > 0) {
 
 if(isset($_POST["submit3"]))
 {
-$sql1 = "DELETE FROM registration_tbl";
+$sql1 = "DELETE FROM test_tbl";
 $conn->query($sql1);
 }
 }
@@ -131,7 +131,7 @@ print("Error connecting to SQL Server.");
 die(print_r($e));
 }
 try {
-$conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
+$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
 ?>
