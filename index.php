@@ -120,20 +120,19 @@ if(count($registrants) > 0) {
     echo "<h3>Ни один пользователь не зарегистрирован.</h3>";
 }
 
-if(isset($_POST["submit3"]))
+/* if(isset($_POST["submit3"]))
 {
+    try {
+$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 $sql1 = "DELETE FROM test_tbl1";
 $conn->query($sql1);
-}
 }
 catch (PDOException $e) {
 print("Error connecting to SQL Server.");
 die(print_r($e));
 }
-try {
-$conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-}
+*/
 ?>
    
 </form>
