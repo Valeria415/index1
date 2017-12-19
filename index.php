@@ -122,7 +122,7 @@ if(count($registrants) > 0) {
 
 if(isset($_POST["submit3"]))
 {
-$sql1 = "DELETE FROM test_tbl";
+$sql1 = "DELETE FROM test_tbl1";
 $conn->query($sql1);
 }
 }
