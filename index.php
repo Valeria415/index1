@@ -46,31 +46,35 @@ try {
 $conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    if(isset($_POST["submit2"])){
+    if(isset($_POST["submit2"]))
+       {
     $password = $_POST['password'];
 $confirmpassword = $_POST['confirm_password'];
     if($password == $confirmpassword)
-    {
+         {
         echo "<h3>Пароль введен верно</h3>";
+         }
+    else {echo "<h3>Пароль введен неверно</h3>";}
+       } 
     }
-    else {echo "<h3>Пароль введен неверно</h3>";}}
-    
-    
-}
-catch (PDOException $e) {
+catch (PDOException $e) 
+{
 print("Error connecting to SQL Server.");
 die(print_r($e));
 }
 
-try {
+try 
+{
 $conn = new PDO("sqlsrv:server = tcp:pinyasova.database.windows.net,1433; Database = Progr", "Valera", "Hswfhmlyz08");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
-catch (PDOException $e) {
+catch (PDOException $e) 
+  {
 print("Error connecting to SQL Server.");
 die(print_r($e));
-}
-if(isset($_POST["submit"])) {
+  }
+if(isset($_POST["submit"])) 
+    {
     if($_POST["name"] =="" || $_POST["password"|| $_POST["email"] ==""){echo "Введите логин и пароль";}
     else{
 try {
@@ -91,7 +95,8 @@ $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $password);
 $stmt->execute();
 }   
-catch(Exception $e) {
+catch(Exception $e) 
+{
 die(var_dump($e));
 }
 echo "<h3>Вы зарегистрированы!</h3>";
@@ -114,11 +119,10 @@ if(count($registrants) > 0) {
         echo "<td>".$registrant['date']."</td>";
         echo "<td>".$registrant['password']."</td></tr>";
     }
-    echo "</table>";
-} else {
+    echo "</table>";}
+    else {
     echo "<h3>Ни один пользователь не зарегистрирован.</h3>";
 }
-
 ?>
    
 </form>
