@@ -75,7 +75,7 @@ die(print_r($e));
   }
 if(isset($_POST["submit"])) 
     {
-    if($_POST["name"] =="" || $_POST["password"|| $_POST["email"] ==""){echo "Введите логин и пароль";}
+    if($_POST["name"] =="" || $_POST["password"]=="" || $_POST["email"] ==""){echo "Введите логин и пароль";}
     else{
 try {
 $name = $_POST['name'];
