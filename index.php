@@ -39,7 +39,7 @@ Email <input type="text"
 <input type="submit"
        name="submit" value="Регистрация"/></br>
 <input type="submit"
-       name="submit3" value="Проверить"/>
+       name="submit3" value="Очистить"/>
     
 
 
